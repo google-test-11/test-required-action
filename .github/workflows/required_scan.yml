@@ -35,7 +35,7 @@ jobs:
           ref: '${{ github.event.inputs.target_ref }}'
 
       - name: 'Initialize CodeQL'
-        uses: 'github/codeql-action/init@2d92b76c45b91eb80fc44c74ce3fce0ee94e8f9d' # ratchet:github/codeql-action/init@v3
+        uses: 'google-test-11/codeql-action/init@573acd9552f33577783abde4acb66a1058e762e5' # ratchet:github/codeql-action/init@v3
         with:
           languages: 'actions'
           queries: 'security-extended'
@@ -50,7 +50,7 @@ jobs:
 
       - name: 'Perform CodeQL Analysis'
         id: 'codeql_analysis'
-        uses: 'github/codeql-action/analyze@2d92b76c45b91eb80fc44c74ce3fce0ee94e8f9d' # ratchet:github/codeql-action/analyze@v3
+        uses: 'google-test-11/codeql-action/analyze@573acd9552f33577783abde4acb66a1058e762e5' # ratchet:github/codeql-action/analyze@v3
         with:
           upload: 'never'
 
